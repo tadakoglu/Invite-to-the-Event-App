@@ -1,0 +1,29 @@
+﻿@model DavetEdilenKisi
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>BilgiMesaji</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body class="text-center">
+    <p>
+        <h4>Teşekkür ettik, @Model.Isim!</h4>
+        @if (Model.KatilacakMi == true)
+        {
+            @:ASP.NET Core etkinliğimize katılmana çok sevindik, görüşmek üzere.
+        }
+        else
+        {
+            @:Üzgünüz ama, bilgilendirdiğin için teşekkür ederiz.
+        }
+    </p>
+    <p>Merak edersen</p>
+    <a class="btn btn-info"  asp-action="KimlerKatiliyor">Kimler Katılıyor?</a>
+</body>
+</html>

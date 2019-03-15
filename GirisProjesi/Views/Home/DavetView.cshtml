@@ -1,0 +1,24 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ASP.NET Core Etkinliği</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    
+    <div class="text-center">
+        <h3>Merhaba! @ViewData["Mesaj"]</h3>
+        <p><h3>Yakın zamanda ASP.NET Core hakkında bir toplantı yapacağız. Katılmak ister misin?</h3></p>
+        <a class="btn btn-warning" asp-action="KatilacaginiBildir">Katılacağını Bildir</a>
+        <a class="btn btn-info" asp-action="KimlerKatiliyor">Kimler Katılıyor?</a>
+    </div>
+   
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<DavetEdilenKisi>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Kimler Katılıyor?</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel-body">
+        <h3>Aşağıdaki arkadaşlarımız etkinliğe katılacak</h3>
+        <table class="table table-bordered table-responsive table-striped">
+            <thead>
+                <tr>
+                    <th>İsim</th>
+                    <th>Email</th>
+                    <th>Telefon</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DavetEdilenKisi kisi in Model)
+                {
+                    <tr>
+                        <td>@kisi.Isim</td>
+                        <td>@kisi.Eposta</td>
+                        <td>@kisi.Telefon</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

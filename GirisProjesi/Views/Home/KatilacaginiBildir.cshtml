@@ -1,0 +1,55 @@
+﻿@model DavetEdilenKisi
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Katılacak mısınız?</title>
+    <link href="~/css/stiller.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+
+</head>
+<body>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 style="color:black">Katılacak mısınız?</h4>
+        </div>
+        <div class="panel-body text-center">
+            <div asp-validation-summary="ModelOnly"></div>
+            <form  asp-action="KatilacaginiBildir" method="post">
+
+                <div class="form-group form-inline">
+                    <label asp-for="Isim">İsim:</label>
+                    <input class="form-control " asp-for="Isim" />
+                    <span asp-validation-for="Isim"></span>
+                </div>
+                <div class="form-group form-inline">
+                    <label asp-for="Eposta">Email:</label>
+                    <input class="form-control " asp-for="Eposta" />
+                    <span asp-validation-for="Eposta"></span>
+                </div>
+                <div class="form-group form-inline">
+                    <label asp-for="Telefon">Telefon:</label>
+                    <input class="form-control " asp-for="Telefon" />
+                    <span asp-validation-for="Telefon"></span>
+                </div>
+                <div class="form-group form-inline">
+                    <label>Katılacak mısınız?</label>
+                    <select class="btn btn-default" asp-for="KatilacakMi">
+                        <option value="">Lütfen gelip gelemeyeceğinizi belirtiniz</option>
+                        <option value="true">Evet, geliyorum !</option>
+                        <option value="false">Belki</option>
+                        <option value="false">Üzgünüm gelemeyeceğim</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-danger">Gönder</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

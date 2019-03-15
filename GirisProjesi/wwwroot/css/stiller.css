@@ -1,0 +1,22 @@
+﻿
+/*bu sınıf asp-for tarafından oluşturulan input'lara doğrulama hatası olduğunda iliştirilir*/
+
+/* bu kutucukların yanındaki hataların stilleri*/
+.field-validation-error {
+    color: #d50034;
+    font-style: italic;
+}
+
+
+/* bu hata oluşan textbox stili, ancak boostrap bunu engelliyor*/
+.input-validation-error {
+    border: 2px solid #f00;
+    background-color: #808080;
+   
+}
+
+/* bu en üstteki toplu halde gösterilen hataların stili*/
+/*.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}*/
